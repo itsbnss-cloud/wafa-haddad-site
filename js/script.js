@@ -235,7 +235,15 @@ document.querySelectorAll('.svc-item').forEach(item => {
 });
 
 
-/* ── 9. VIDEO: autoplay on scroll into view ──────────────── */
+/* ── 9. SERVICE CARDS FLIP ───────────────────────────────── */
+document.querySelectorAll('.svc-flip').forEach(card => {
+    card.addEventListener('click', e => {
+        if (e.target.closest('.svc-back-cta')) return;
+        card.classList.toggle('flipped');
+    });
+});
+
+/* ── 10. VIDEO: autoplay on scroll into view ──────────────── */
 const videoEl = document.querySelector('.video-wrapper video');
 if (videoEl) {
     videoEl.muted = true;
