@@ -508,14 +508,14 @@ h4 {
 .stat-item small {
   font-size: 10px;
   font-weight: 400;
-  color: var(--ink-soft);
+  color: rgba(255,255,255,0.65);
   letter-spacing: 0.5px;
   margin-top: 2px;
 }
 .stat-sep {
   width: 1px;
   height: 36px;
-  background: var(--rule);
+  background: rgba(255,255,255,0.25);
   flex-shrink: 0;
 }
 
