@@ -1106,12 +1106,14 @@ h4 {
 /* ── 11. VIDEO ────────────────────────────────────────── */
 .video-section {
   background: var(--sage-mist);
-  padding: 100px var(--px);
+  padding: 80px var(--px);
   text-align: center;
+  overflow: hidden;
 }
 .video-inner {
-  max-width: 480px;
+  max-width: 360px;
   margin: 0 auto;
+  width: 100%;
 }
 .video-label {
   font-size: 11px;
@@ -1122,10 +1124,10 @@ h4 {
   margin-bottom: 16px;
 }
 .video-title {
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(24px, 4vw, 38px);
   font-weight: 300;
   color: var(--ink);
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   line-height: 1.2;
 }
 .video-title em {
@@ -1133,14 +1135,15 @@ h4 {
   color: var(--sage);
 }
 .video-wrapper {
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  width: 100%;
 }
 .video-wrapper video {
   display: block;
   width: 100%;
-  max-height: 80svh;
+  max-height: 60svh;
   object-fit: cover;
   background: #000;
 }
