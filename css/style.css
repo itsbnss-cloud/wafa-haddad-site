@@ -4,6 +4,14 @@
    ══════════════════════════════════════════════════════ */
 
 @font-face {
+  font-family: "Vemka";
+  src: url("../assets/VEMKA.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Aloevera";
   src: url("../assets/aloevera/Aloevera-Light.otf") format("opentype");
   font-weight: 300;
@@ -103,7 +111,7 @@ svg {
   --ink-soft: #909090;
   --rule: #e0e0e0;
 
-  --display: "Cormorant Garamond", Georgia, serif;
+  --display: "Vemka", "Cormorant Garamond", Georgia, serif;
   --body: "Aloevera", "Inter", -apple-system, sans-serif;
 
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
