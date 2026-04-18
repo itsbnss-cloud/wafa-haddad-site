@@ -3,6 +3,14 @@
    Redesigned stylesheet — editorial premium layout
    ══════════════════════════════════════════════════════ */
 
+@font-face {
+  font-family: "IBrand";
+  src: url("../assets/ibrand.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── 1. RESET ─────────────────────────────────────────── */
 *,
 *::before,
@@ -68,7 +76,7 @@ svg {
   --rule: #e0e0e0;
 
   --display: "Cormorant Garamond", Georgia, serif;
-  --body: "Inter", -apple-system, sans-serif;
+  --body: "IBrand", "Inter", -apple-system, sans-serif;
 
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
