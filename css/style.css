@@ -1272,6 +1272,26 @@ h4 {
   box-shadow: 0 12px 32px rgba(37, 211, 102, 0.38);
 }
 
+.instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: var(--white);
+  padding: 14px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 12px;
+  transition: opacity var(--tr), transform var(--tr), box-shadow var(--tr);
+  box-shadow: 0 6px 24px rgba(220, 39, 67, 0.25);
+}
+.instagram-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(220, 39, 67, 0.38);
+}
+
 /* Form card */
 .contact-form-card {
   background: rgba(255, 255, 255, 0.04);
