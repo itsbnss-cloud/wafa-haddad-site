@@ -710,8 +710,8 @@ h4 {
 /* Floating tag overlaps right edge of image */
 .about-float-tag {
   position: absolute;
-  bottom: 60px;
-  right: 24px;
+  bottom: 40px;
+  left: 24px;
   background: var(--white);
   border-radius: 14px;
   padding: 16px 20px;
