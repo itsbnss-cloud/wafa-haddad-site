@@ -438,9 +438,11 @@ h4 {
   margin-bottom: 60px;
 }
 .hero-title em {
-  font-style: italic;
-  color: rgba(255,255,255,0.85);
+  font-style: normal;
+  color: rgba(255,255,255,0.75);
   font-weight: 300;
+  display: block;
+  line-height: 1.02;
 }
 
 .hero-lower {
