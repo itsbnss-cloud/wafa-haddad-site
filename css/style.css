@@ -1385,19 +1385,13 @@ a.footer-contact-row:hover { color: rgba(255,255,255,.65); }
     .hero-sub { font-size: 14px; max-width: 100%; margin-bottom: 22px; }
     .hero-side-label { display: none; }
     .hero-scroll-cue { display: none; }
-    /* Float elements: spread portrait badge right, float card bottom-left */
+    /* Float elements — badge below navbar, float card hidden on mobile */
     .portrait-badge {
-        left: auto; right: 12px; top: 16px;
+        left: auto; right: 12px;
+        top: 68px; /* below the fixed navbar */
         font-size: 11px; padding: 8px 12px;
     }
-    .hero-float-card {
-        bottom: 14px; left: 12px; right: auto;
-        padding: 10px 14px;
-        border-radius: 12px;
-    }
-    .float-emoji { font-size: 20px; }
-    .hero-float-card strong { font-size: 12px; }
-    .hero-float-card span { font-size: 10px; }
+    .hero-float-card { display: none; }
     .stat-sep { display: none; }
     .hero-stats { gap: 16px 28px; flex-wrap: wrap; padding-top: 24px; }
 
