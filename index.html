@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-theme="light" data-lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wafa Haddad, nutritionniste spécialisée en accompagnement minceur personnalisé.">
+    <title>Wafa Haddad – Nutritionniste</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Latin fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Arabic font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="assets/Logo /SVG/icone - wafa.svg">
+    <link rel="icon" type="image/png"     href="assets/Logo /PNG/icone - wafa.png">
+    <link rel="apple-touch-icon"          href="assets/Logo /PNG/icone - wafa.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ─────────────────────────────────────────────────
+     NAVIGATION
+───────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-brand">
+            <img src="assets/Logo /SVG/icone - wafa.svg" class="nav-logo-icon" alt="" aria-hidden="true" width="36" height="36">
+            <div class="nav-brand-text">
+                <span class="brand-name">Wafa Haddad</span>
+                <span class="brand-sub" data-i18n="nav-brand-sub">Nutritionniste</span>
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about"    data-i18n="nav-about">À propos</a></li>
+            <li><a href="#services" data-i18n="nav-services">Services</a></li>
+            <li><a href="#results"  data-i18n="nav-results">Résultats</a></li>
+            <li><a href="#contact"  data-i18n="nav-contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-cta" data-i18n="nav-cta">Prendre rendez-vous</a>
+
+        <!-- Language switcher -->
+        <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Langue / اللغة">
+            <button class="lang-btn active" data-lang-btn="fr">FR</button>
+            <button class="lang-btn"        data-lang-btn="ar">AR</button>
+        </div>
+
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1"  x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22"  y1="4.22"  x2="5.64"  y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1"  y1="12" x2="3"  y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
+                <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+            </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span>
+        </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about"    class="mobile-link" data-i18n="nav-about">À propos</a></li>
+            <li><a href="#services" class="mobile-link" data-i18n="nav-services">Services</a></li>
+            <li><a href="#results"  class="mobile-link" data-i18n="nav-results">Résultats</a></li>
+            <li><a href="#contact"  class="mobile-link" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+        <div class="mobile-controls">
+            <div class="lang-switcher lang-switcher--mobile" role="group">
+                <button class="lang-btn active" data-lang-btn="fr">FR</button>
+                <button class="lang-btn"        data-lang-btn="ar">AR</button>
+            </div>
+            <a href="#contact" class="mobile-link mobile-cta-link" data-i18n="nav-cta">Prendre rendez-vous →</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ─────────────────────────────────────────────────
+     HERO
+───────────────────────────────────────────────── -->
+<section class="hero" id="hero">
+    <div class="hero-text">
+        <div class="hero-overline">
+            <span class="ol-line"></span>
+            <span data-i18n="hero-overline">Nutritionniste Certifiée</span>
+        </div>
+
+        <h1 class="hero-title" data-i18n-html="hero-title">
+            Nutritionniste<br>
+            <em>&amp; accompagnement</em><br>
+            minceur<br>
+            personnalisé
+        </h1>
+
+        <div class="hero-lower">
+            <p class="hero-sub" data-i18n="hero-sub">
+                Retrouvez l'équilibre, la vitalité et la confiance en vous —
+                grâce à un suivi nutritionnel doux, humain et durable.
+            </p>
+            <a href="#contact" class="hero-cta">
+                <span data-i18n="hero-cta">Prendre rendez-vous</span>
+                <span class="hero-cta-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <strong>10</strong><span>+</span>
+                <small data-i18n="stat-exp">années d'expérience</small>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+                <strong>500</strong><span>+</span>
+                <small data-i18n="stat-patients">patients accompagnés</small>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+                <strong>100</strong><span>%</span>
+                <small data-i18n="stat-suivi">suivi personnalisé</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+        <div class="hero-portrait">
+            <div class="portrait-fill"></div>
+            <svg class="portrait-svg" viewBox="0 0 300 440" fill="none" preserveAspectRatio="xMidYMid slice">
+                <rect width="300" height="440" fill="#CCE9E4"/>
+                <ellipse cx="150" cy="138" rx="66" ry="74" fill="rgba(7,168,141,0.18)"/>
+                <path d="M30 440 C30 316 270 316 270 440Z" fill="rgba(7,168,141,0.14)"/>
+                <rect x="122" y="206" width="56" height="38" rx="12" fill="rgba(7,168,141,0.11)"/>
+            </svg>
+            <span class="portrait-ph-label" data-i18n="portrait-label">Photo portrait</span>
+            <div class="portrait-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C518"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span data-i18n="portrait-badge">Spécialiste minceur</span>
+            </div>
+        </div>
+        <div class="hero-float-card">
+            <span class="float-emoji">🥗</span>
+            <div>
+                <strong data-i18n="float-card-title">Première consultation</strong>
+                <span data-i18n="float-card-sub">Bilan nutritionnel offert</span>
+            </div>
+        </div>
+        <div class="hero-side-label" aria-hidden="true" data-i18n="hero-side">Cabinet &amp; En ligne</div>
+    </div>
+
+    <div class="hero-scroll-cue" aria-hidden="true">
+        <div class="scroll-line-anim"></div>
+        <span data-i18n="scroll-cue">Scroll</span>
+    </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────
+     MARQUEE RIBBON
+───────────────────────────────────────────────── -->
+<div class="marquee-ribbon" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+        <!-- filled by JS based on lang -->
+        <span>Équilibre</span><span class="m-dot">·</span>
+        <span>Vitalité</span><span class="m-dot">·</span>
+        <span>Bien-être</span><span class="m-dot">·</span>
+        <span>Personnalisé</span><span class="m-dot">·</span>
+        <span>Durable</span><span class="m-dot">·</span>
+        <span>Bienveillant</span><span class="m-dot">·</span>
+        <span>Sans restriction</span><span class="m-dot">·</span>
+        <span>Résultats réels</span><span class="m-dot">·</span>
+        <span>Équilibre</span><span class="m-dot">·</span>
+        <span>Vitalité</span><span class="m-dot">·</span>
+        <span>Bien-être</span><span class="m-dot">·</span>
+        <span>Personnalisé</span><span class="m-dot">·</span>
+        <span>Durable</span><span class="m-dot">·</span>
+        <span>Bienveillant</span><span class="m-dot">·</span>
+        <span>Sans restriction</span><span class="m-dot">·</span>
+        <span>Résultats réels</span><span class="m-dot">·</span>
+    </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────────────
+     ABOUT
+───────────────────────────────────────────────── -->
+<section class="about" id="about">
+    <div class="about-image-col reveal">
+        <div class="about-img-frame">
+            <svg viewBox="0 0 400 560" fill="none" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="560" fill="#C8E4DF"/>
+                <ellipse cx="200" cy="178" rx="84" ry="94" fill="rgba(7,168,141,0.20)"/>
+                <path d="M40 560 C40 402 360 402 360 560Z" fill="rgba(7,168,141,0.16)"/>
+                <rect x="162" y="266" width="76" height="50" rx="14" fill="rgba(7,168,141,0.12)"/>
+            </svg>
+            <span class="img-ph-label" data-i18n="about-img-label">Photo professionnelle</span>
+        </div>
+        <div class="about-float-tag">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#07a88d" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div>
+                <strong data-i18n="about-tag-title">Approche bienveillante</strong>
+                <span  data-i18n="about-tag-sub">Sans régimes restrictifs</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-text-col reveal reveal-delay">
+        <span class="overline" data-i18n="about-overline">À propos</span>
+        <h2 class="about-heading" data-i18n-html="about-heading">
+            Une nutritionniste<br><em>à votre écoute</em>
+        </h2>
+        <blockquote class="about-pull" data-i18n="about-pull">
+            "Mon objectif&nbsp;: que vous vous sentiez bien dans votre corps, et que vous y restiez."
+        </blockquote>
+        <p class="about-body" data-i18n="about-body-1">
+            Depuis plus de 10 ans, j'accompagne mes patients vers un équilibre nutritionnel durable, sans contraintes excessives ni régimes frustrants. Mon approche est avant tout humaine : je prends le temps d'écouter chaque personne, de comprendre son mode de vie, ses habitudes et ses objectifs pour construire ensemble un programme qui lui ressemble vraiment.
+        </p>
+        <p class="about-body" data-i18n="about-body-2">
+            Diplômée en nutrition clinique et spécialisée dans les cures minceur, je combine suivi nutritionnel et techniques de remodelage corporel pour des résultats visibles et durables.
+        </p>
+        <ul class="about-values">
+            <li>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="value-1">Suivi sur mesure et personnalisé</span>
+            </li>
+            <li>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="value-2">Résultats visibles et durables</span>
+            </li>
+            <li>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="value-3">Accompagnement bienveillant, sans jugement</span>
+            </li>
+            <li>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="value-4">Consultations en cabinet et en ligne</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────
+     SERVICES
+───────────────────────────────────────────────── -->
+<section class="services" id="services">
+    <div class="services-header container reveal">
+        <span class="overline" data-i18n="svc-overline">Services</span>
+        <div class="services-header-row">
+            <h2 class="services-heading" data-i18n="svc-heading">Ce que je propose</h2>
+            <p class="services-intro"   data-i18n="svc-intro">Un accompagnement global pour retrouver votre équilibre et atteindre vos objectifs en toute sérénité.</p>
+        </div>
+    </div>
+
+    <div class="services-list container">
+        <!-- 01 -->
+        <div class="svc-item reveal">
+            <span class="svc-ghost-num" aria-hidden="true">01</span>
+            <div class="svc-number">01</div>
+            <div class="svc-line"></div>
+            <div class="svc-body">
+                <h3 class="svc-title" data-i18n="svc1-title">Suivi nutritionnel personnalisé</h3>
+                <p   class="svc-desc"  data-i18n="svc1-desc">Un bilan complet de vos habitudes alimentaires, suivi d'un programme nutritionnel adapté à votre profil, vos goûts et vos objectifs. Accompagnement régulier et ajustements progressifs.</p>
+                <a href="#contact" class="svc-link">
+                    <span data-i18n="svc-cta">Prendre rendez-vous</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="svc-tags" data-i18n="svc1-tags">Bilan &nbsp;·&nbsp; Programme &nbsp;·&nbsp; Suivi</div>
+        </div>
+
+        <!-- 02 -->
+        <div class="svc-item svc-item--featured reveal reveal-delay">
+            <span class="svc-ghost-num" aria-hidden="true">02</span>
+            <div class="svc-number">02</div>
+            <div class="svc-line"></div>
+            <div class="svc-body">
+                <span class="svc-badge" data-i18n="svc-popular">Populaire</span>
+                <h3 class="svc-title" data-i18n="svc2-title">Cures minceur</h3>
+                <p   class="svc-desc"  data-i18n="svc2-desc">Des programmes intensifs combinant nutrition et techniques de remodelage corporel&nbsp;: lipomassage, cavitation, drainage lymphatique. Des cures ciblées pour des résultats visibles rapidement.</p>
+                <a href="#contact" class="svc-link">
+                    <span data-i18n="svc-cta">Prendre rendez-vous</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="svc-tags" data-i18n="svc2-tags">Lipomassage &nbsp;·&nbsp; Cavitation &nbsp;·&nbsp; Drainage</div>
+        </div>
+
+        <!-- 03 -->
+        <div class="svc-item reveal reveal-delay-2">
+            <span class="svc-ghost-num" aria-hidden="true">03</span>
+            <div class="svc-number">03</div>
+            <div class="svc-line"></div>
+            <div class="svc-body">
+                <h3 class="svc-title" data-i18n="svc3-title">Rééquilibrage alimentaire</h3>
+                <p   class="svc-desc"  data-i18n="svc3-desc">Des conseils pratiques pour transformer votre rapport à la nourriture. Apprenez à manger équilibré sans frustration, à lire les étiquettes et à cuisiner sainement au quotidien.</p>
+                <a href="#contact" class="svc-link">
+                    <span data-i18n="svc-cta">Prendre rendez-vous</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="svc-tags" data-i18n="svc3-tags">Conseils &nbsp;·&nbsp; Équilibre &nbsp;·&nbsp; Quotidien</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────
+     RESULTS
+───────────────────────────────────────────────── -->
+<section class="results" id="results">
+    <div class="container">
+        <div class="results-header reveal">
+            <span class="overline" data-i18n="res-overline">Résultats</span>
+            <h2 class="results-heading" data-i18n-html="res-heading">Transformations<br><em>réelles</em></h2>
+            <p class="results-sub" data-i18n="res-sub">Des résultats concrets obtenus par mes patients grâce à un accompagnement nutritionnel dédié.</p>
+        </div>
+
+        <div class="results-ghost" aria-hidden="true" data-i18n="res-ghost">kg</div>
+
+        <div class="results-grid">
+            <div class="result-card result-card--large reveal">
+                <div class="result-images">
+                    <div class="rph rph--before"><span data-i18n="res-before">Avant</span></div>
+                    <div class="result-mid"><div class="result-arrow-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+                    <div class="rph rph--after"><span data-i18n="res-after">Après</span></div>
+                </div>
+                <div class="result-foot">
+                    <strong class="result-metric">–12 kg</strong>
+                    <span class="result-duration" data-i18n="res1-duration">en 4 mois</span>
+                    <p class="result-type" data-i18n="res1-type">Programme personnalisé intensif</p>
+                </div>
+            </div>
+
+            <div class="result-card reveal reveal-delay">
+                <div class="result-images result-images--small">
+                    <div class="rph rph--before"><span data-i18n="res-before">Avant</span></div>
+                    <div class="result-mid"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                    <div class="rph rph--after"><span data-i18n="res-after">Après</span></div>
+                </div>
+                <div class="result-foot">
+                    <strong class="result-metric">–8 kg</strong>
+                    <span class="result-duration" data-i18n="res2-duration">en 3 mois</span>
+                    <p class="result-type" data-i18n="res2-type">Suivi nutritionnel + cure minceur</p>
+                </div>
+            </div>
+
+            <div class="result-card reveal reveal-delay-2">
+                <div class="result-images result-images--small">
+                    <div class="rph rph--before"><span data-i18n="res-before">Avant</span></div>
+                    <div class="result-mid"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                    <div class="rph rph--after"><span data-i18n="res-after">Après</span></div>
+                </div>
+                <div class="result-foot">
+                    <strong class="result-metric">–5 kg</strong>
+                    <span class="result-duration" data-i18n="res3-duration">en 6 semaines</span>
+                    <p class="result-type" data-i18n="res3-type">Rééquilibrage alimentaire</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="results-note reveal" data-i18n="res-note">* Les résultats varient selon les individus. Ces exemples sont donnés à titre indicatif.</p>
+    </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────
+     CONTACT
+───────────────────────────────────────────────── -->
+<section class="contact" id="contact">
+    <div class="contact-inner">
+        <div class="contact-left reveal">
+            <span class="overline overline--light" data-i18n="contact-overline">Contact</span>
+            <h2 class="contact-heading" data-i18n-html="contact-heading">Prendre<br><em>rendez-vous</em></h2>
+            <p class="contact-sub" data-i18n="contact-sub">Commencez votre transformation dès aujourd'hui. Je suis disponible pour répondre à toutes vos questions.</p>
+
+            <div class="contact-details">
+                <div class="contact-row">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 11.8a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.08 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:+21621716595">+216 21 716 595</a>
+                </div>
+                <div class="contact-row">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Rue d'Espagne, en face du lycée<br>jeunes filles, Bizerte</span>
+                </div>
+                <div class="contact-row">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span data-i18n="contact-hours">Lundi – Samedi : 9h00 – 18h00</span>
+                </div>
+            </div>
+
+            <a href="https://wa.me/21621716595" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span data-i18n="wa-btn">Contacter sur WhatsApp</span>
+            </a>
+        </div>
+
+        <div class="contact-right reveal reveal-delay">
+            <div class="contact-form-card">
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="fg">
+                            <label for="firstName" data-i18n="form-fname">Prénom</label>
+                            <input type="text" id="firstName" name="firstName" data-i18n-ph="form-fname-ph" placeholder="Votre prénom" required>
+                        </div>
+                        <div class="fg">
+                            <label for="lastName" data-i18n="form-lname">Nom</label>
+                            <input type="text" id="lastName" name="lastName" data-i18n-ph="form-lname-ph" placeholder="Votre nom" required>
+                        </div>
+                    </div>
+                    <div class="fg">
+                        <label for="phone" data-i18n="form-phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+216 XX XXX XXX" required>
+                    </div>
+                    <div class="fg">
+                        <label for="objective" data-i18n="form-obj">Objectif</label>
+                        <select id="objective" name="objective">
+                            <option value=""             data-i18n="form-obj-default">Choisissez votre objectif</option>
+                            <option value="perte-poids"  data-i18n="form-obj-1">Perte de poids</option>
+                            <option value="reequilibrage" data-i18n="form-obj-2">Rééquilibrage alimentaire</option>
+                            <option value="cure-minceur" data-i18n="form-obj-3">Cure minceur</option>
+                            <option value="autre"        data-i18n="form-obj-4">Autre</option>
+                        </select>
+                    </div>
+                    <div class="fg">
+                        <label for="message">
+                            <span data-i18n="form-msg">Message</span>
+                            <span class="fg-opt" data-i18n="form-optional">(optionnel)</span>
+                        </label>
+                        <textarea id="message" name="message" rows="3" data-i18n-ph="form-msg-ph" placeholder="Parlez-moi de votre situation…"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit" id="submitBtn">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <span data-i18n="form-submit">Envoyer via WhatsApp</span>
+                    </button>
+                </form>
+
+                <div class="form-success" id="formSuccess">
+                    <div class="success-ring">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <h3 data-i18n="form-success-title">WhatsApp ouvert !</h3>
+                    <p  data-i18n="form-success-body">Votre message est prêt dans WhatsApp. Appuyez sur Envoyer pour contacter Wafa directement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────
+     FLOATING WHATSAPP
+───────────────────────────────────────────────── -->
+<a href="https://wa.me/21621716595" class="floating-wa" id="floatingWa"
+   target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+
+<!-- ─────────────────────────────────────────────────
+     FOOTER
+───────────────────────────────────────────────── -->
+<footer class="footer">
+    <div class="footer-nameplate" aria-hidden="true">Wafa Haddad</div>
+    <div class="footer-bottom container">
+        <div class="footer-brand">
+            <img src="assets/Logo /SVG/icone - wafa.svg" class="footer-logo-icon" alt="Wafa Haddad" width="44" height="44">
+            <span class="brand-name">Wafa Haddad</span>
+            <span class="brand-sub" data-i18n="nav-brand-sub">Nutritionniste</span>
+            <p data-i18n="footer-tagline">Retrouvez l'équilibre et la vitalité grâce à un accompagnement nutritionnel personnalisé et bienveillant.</p>
+            <div class="footer-contact">
+                <a href="tel:+21621716595" class="footer-contact-row">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 11.8a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.08 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +216 21 716 595
+                </a>
+                <span class="footer-contact-row">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Rue d'Espagne, Bizerte
+                </span>
+            </div>
+        </div>
+        <nav class="footer-nav">
+            <a href="#about"    data-i18n="nav-about">À propos</a>
+            <a href="#services" data-i18n="nav-services">Services</a>
+            <a href="#results"  data-i18n="nav-results">Résultats</a>
+            <a href="#contact"  data-i18n="nav-contact">Contact</a>
+        </nav>
+        <p class="footer-copy" data-i18n="footer-copy">© 2024 Wafa Haddad – Nutritionniste. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
