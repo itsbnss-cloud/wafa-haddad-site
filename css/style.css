@@ -721,6 +721,17 @@ h4 {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.09);
   z-index: 3;
   min-width: 220px;
+  animation: floatTag 3s ease-in-out infinite;
+  transition: transform var(--tr-md), box-shadow var(--tr-md);
+}
+.about-float-tag:hover {
+  animation-play-state: paused;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
+}
+@keyframes floatTag {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
 }
 .about-float-tag strong {
   display: block;
