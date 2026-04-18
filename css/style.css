@@ -769,9 +769,9 @@ h4 {
   flex-shrink: 0;
 }
 
-/* ── 9. SERVICES — Editorial numbered list ────────────── */
+/* ── 9. SERVICES — Cards marketing ────────────────────── */
 .services {
-  background: var(--stone);
+  background: var(--ink);
   padding: clamp(80px, 10vw, 140px) 0;
 }
 
@@ -788,151 +788,139 @@ h4 {
   font-size: clamp(36px, 5vw, 60px);
   font-weight: 400;
   line-height: 1.1;
-  color: var(--ink);
+  color: var(--white);
 }
 .services-intro {
   font-size: 15px;
-  color: var(--ink-soft);
+  color: rgba(255,255,255,0.5);
   font-weight: 300;
   line-height: 1.8;
   max-width: 380px;
   padding-bottom: 8px;
 }
 
-/* Each service row */
-.svc-item {
-  position: relative;
+/* Cards grid */
+.services-grid {
   display: grid;
-  grid-template-columns: 64px 1fr auto;
-  gap: 0 32px;
-  align-items: start;
-  padding: 44px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.svc-card {
+  position: relative;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 20px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform var(--tr-md), box-shadow var(--tr-md), border-color var(--tr-md);
   overflow: hidden;
-  transition: background var(--tr);
 }
-.svc-item:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-.svc-item::after {
+.svc-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.5);
-  transform: translateX(-101%);
-  transition: transform 0.55s var(--ease-out);
-  border-radius: 4px;
+  background: radial-gradient(ellipse at top left, rgba(7,168,141,0.08) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-out);
   pointer-events: none;
 }
-.svc-item:hover::after {
-  transform: translateX(0);
+.svc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  border-color: rgba(7,168,141,0.3);
+}
+.svc-card:hover::before {
+  opacity: 1;
 }
 
-/* Ghost number in background */
-.svc-ghost-num {
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--display);
-  font-size: clamp(100px, 14vw, 180px);
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.025);
-  pointer-events: none;
-  user-select: none;
+.svc-card-icon {
+  font-size: 36px;
   line-height: 1;
-  z-index: 0;
 }
-
-.svc-number {
+.svc-card-num {
+  position: absolute;
+  top: 28px;
+  right: 32px;
   font-family: var(--display);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 400;
-  color: var(--ink-soft);
-  padding-top: 8px;
-  position: relative;
-  z-index: 1;
-}
-
-.svc-line {
-  display: none; /* structural spacer handled by grid */
-}
-
-.svc-body {
-  position: relative;
-  z-index: 1;
-}
-.svc-badge {
-  display: inline-block;
-  font-size: 9px;
-  font-weight: 600;
+  color: rgba(255,255,255,0.2);
   letter-spacing: 2px;
+}
+.svc-card-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--white);
-  background: var(--sage);
-  padding: 4px 12px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-.svc-title {
-  font-size: clamp(22px, 3vw, 34px);
-  font-weight: 400;
   color: var(--ink);
-  line-height: 1.2;
-  margin-bottom: 14px;
-  transition: color var(--tr);
+  background: var(--sage);
+  padding: 5px 14px;
+  border-radius: 100px;
+  width: fit-content;
 }
-.svc-item:hover .svc-title {
-  color: var(--sage-deep);
+.svc-card-title {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.25;
+  font-family: var(--display);
 }
-
-.svc-desc {
-  font-size: 14.5px;
-  color: var(--ink-mid);
+.svc-card-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
   font-weight: 300;
   line-height: 1.8;
-  max-width: 520px;
-  margin-bottom: 20px;
+  flex: 1;
 }
-
-.svc-link {
+.svc-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.svc-card-tags span {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+.svc-card-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: var(--sage-deep);
+  color: var(--sage);
+  margin-top: 4px;
   transition: gap var(--tr);
 }
-.svc-link:hover {
+.svc-card-cta:hover {
   gap: 14px;
 }
-.svc-link svg {
+.svc-card-cta svg {
   transition: transform var(--tr);
 }
-.svc-link:hover svg {
+.svc-card-cta:hover svg {
   transform: translateX(4px);
 }
 
-.svc-tags {
-  font-size: 11px;
-  color: var(--ink-soft);
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  padding-top: 8px;
-  text-align: right;
-  position: relative;
-  z-index: 1;
-  white-space: nowrap;
+/* Featured card */
+.svc-card--featured {
+  background: rgba(7,168,141,0.08);
+  border-color: rgba(7,168,141,0.25);
 }
-
-/* Featured row gets a very subtle left accent */
-.svc-item--featured {
-  padding-left: 20px;
-  border-left: 2px solid var(--sage);
+.svc-card--featured .svc-card-title {
+  color: #fff;
 }
-.svc-item--featured .svc-number {
-  color: var(--sage);
+.svc-card--featured::before {
+  background: radial-gradient(ellipse at top left, rgba(7,168,141,0.18) 0%, transparent 65%);
+  opacity: 1;
 }
 
 /* ── 10. RESULTS — Asymmetric magazine grid ───────────── */
@@ -1794,24 +1782,12 @@ a.footer-contact-row:hover {
   .services-header {
     margin-bottom: 44px;
   }
-  .svc-item {
-    grid-template-columns: 44px 1fr;
-    grid-template-rows: auto auto;
-    padding: 32px 0;
-    gap: 0 18px;
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .svc-tags {
-    grid-column: 2;
-    text-align: left;
-    padding-top: 12px;
-    padding-bottom: 4px;
-  }
-  .svc-ghost-num {
-    font-size: clamp(64px, 18vw, 130px);
-    right: -8px;
-  }
-  .svc-item--featured {
-    padding-left: 14px;
+  .svc-card {
+    padding: 32px 28px;
   }
 
   /* ── Results ── */

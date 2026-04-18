@@ -216,22 +216,11 @@
             alt="Wafa Haddad, Nutritionniste"
           />
         </div>
-        <div class="hero-float-card">
-          <span class="float-emoji">🥗</span>
-          <div>
-            <strong data-i18n="float-card-title">Première consultation</strong>
-            <span data-i18n="float-card-sub">Bilan nutritionnel offert</span>
-          </div>
-        </div>
         <div class="hero-side-label" aria-hidden="true" data-i18n="hero-side">
           Cabinet &amp; En ligne
         </div>
       </div>
 
-      <div class="hero-scroll-cue" aria-hidden="true">
-        <div class="scroll-line-anim"></div>
-        <span data-i18n="scroll-cue">Scroll</span>
-      </div>
     </section>
 
     <!-- ─────────────────────────────────────────────────
@@ -384,11 +373,9 @@
 ───────────────────────────────────────────────── -->
     <section class="services" id="services">
       <div class="services-header container reveal">
-        <span class="overline" data-i18n="svc-overline">Services</span>
+        <span class="overline overline--light" data-i18n="svc-overline">Services</span>
         <div class="services-header-row">
-          <h2 class="services-heading" data-i18n="svc-heading">
-            Ce que je propose
-          </h2>
+          <h2 class="services-heading" data-i18n="svc-heading">Ce que je propose</h2>
           <p class="services-intro" data-i18n="svc-intro">
             Un accompagnement global pour retrouver votre équilibre et atteindre
             vos objectifs en toute sérénité.
@@ -396,107 +383,63 @@
         </div>
       </div>
 
-      <div class="services-list container">
+      <div class="services-grid container">
         <!-- 01 -->
-        <div class="svc-item reveal">
-          <span class="svc-ghost-num" aria-hidden="true">01</span>
-          <div class="svc-number">01</div>
-          <div class="svc-line"></div>
-          <div class="svc-body">
-            <h3 class="svc-title" data-i18n="svc1-title">
-              Suivi nutritionnel personnalisé
-            </h3>
-            <p class="svc-desc" data-i18n="svc1-desc">
-              Un bilan complet de vos habitudes alimentaires, suivi d'un
-              programme nutritionnel adapté à votre profil, vos goûts et vos
-              objectifs. Accompagnement régulier et ajustements progressifs.
-            </p>
-            <a href="#contact" class="svc-link">
-              <span data-i18n="svc-cta">Prendre rendez-vous</span>
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+        <div class="svc-card reveal">
+          <div class="svc-card-icon">🥗</div>
+          <span class="svc-card-num">01</span>
+          <h3 class="svc-card-title" data-i18n="svc1-title">Suivi nutritionnel personnalisé</h3>
+          <p class="svc-card-desc" data-i18n="svc1-desc">
+            Un bilan complet de vos habitudes alimentaires, suivi d'un programme
+            nutritionnel adapté à votre profil, vos goûts et vos objectifs.
+            Accompagnement régulier et ajustements progressifs.
+          </p>
+          <div class="svc-card-tags">
+            <span>Bilan</span><span>Programme</span><span>Suivi</span>
           </div>
-          <div class="svc-tags" data-i18n="svc1-tags">
-            Bilan &nbsp;·&nbsp; Programme &nbsp;·&nbsp; Suivi
-          </div>
+          <a href="#contact" class="svc-card-cta">
+            Prendre rendez-vous
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
 
-        <!-- 02 -->
-        <div class="svc-item svc-item--featured reveal reveal-delay">
-          <span class="svc-ghost-num" aria-hidden="true">02</span>
-          <div class="svc-number">02</div>
-          <div class="svc-line"></div>
-          <div class="svc-body">
-            <span class="svc-badge" data-i18n="svc-popular">Populaire</span>
-            <h3 class="svc-title" data-i18n="svc2-title">Cures minceur</h3>
-            <p class="svc-desc" data-i18n="svc2-desc">
-              Des programmes intensifs combinant nutrition et techniques de
-              remodelage corporel&nbsp;: lipomassage, cavitation, drainage
-              lymphatique. Des cures ciblées pour des résultats visibles
-              rapidement.
-            </p>
-            <a href="#contact" class="svc-link">
-              <span data-i18n="svc-cta">Prendre rendez-vous</span>
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+        <!-- 02 — Featured -->
+        <div class="svc-card svc-card--featured reveal reveal-delay">
+          <div class="svc-card-badge" data-i18n="svc-popular">⭐ Populaire</div>
+          <div class="svc-card-icon">✨</div>
+          <span class="svc-card-num">02</span>
+          <h3 class="svc-card-title" data-i18n="svc2-title">Cures minceur</h3>
+          <p class="svc-card-desc" data-i18n="svc2-desc">
+            Des programmes intensifs combinant nutrition et techniques de
+            remodelage corporel&nbsp;: lipomassage, cavitation, drainage
+            lymphatique. Des cures ciblées pour des résultats visibles rapidement.
+          </p>
+          <div class="svc-card-tags">
+            <span>Lipomassage</span><span>Cavitation</span><span>Drainage</span>
           </div>
-          <div class="svc-tags" data-i18n="svc2-tags">
-            Lipomassage &nbsp;·&nbsp; Cavitation &nbsp;·&nbsp; Drainage
-          </div>
+          <a href="#contact" class="svc-card-cta">
+            Prendre rendez-vous
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
 
         <!-- 03 -->
-        <div class="svc-item reveal reveal-delay-2">
-          <span class="svc-ghost-num" aria-hidden="true">03</span>
-          <div class="svc-number">03</div>
-          <div class="svc-line"></div>
-          <div class="svc-body">
-            <h3 class="svc-title" data-i18n="svc3-title">
-              Rééquilibrage alimentaire
-            </h3>
-            <p class="svc-desc" data-i18n="svc3-desc">
-              Des conseils pratiques pour transformer votre rapport à la
-              nourriture. Apprenez à manger équilibré sans frustration, à lire
-              les étiquettes et à cuisiner sainement au quotidien.
-            </p>
-            <a href="#contact" class="svc-link">
-              <span data-i18n="svc-cta">Prendre rendez-vous</span>
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+        <div class="svc-card reveal reveal-delay-2">
+          <div class="svc-card-icon">🌿</div>
+          <span class="svc-card-num">03</span>
+          <h3 class="svc-card-title" data-i18n="svc3-title">Rééquilibrage alimentaire</h3>
+          <p class="svc-card-desc" data-i18n="svc3-desc">
+            Des conseils pratiques pour transformer votre rapport à la nourriture.
+            Apprenez à manger équilibré sans frustration, à lire les étiquettes et
+            à cuisiner sainement au quotidien.
+          </p>
+          <div class="svc-card-tags">
+            <span>Conseils</span><span>Équilibre</span><span>Quotidien</span>
           </div>
-          <div class="svc-tags" data-i18n="svc3-tags">
-            Conseils &nbsp;·&nbsp; Équilibre &nbsp;·&nbsp; Quotidien
-          </div>
+          <a href="#contact" class="svc-card-cta">
+            Prendre rendez-vous
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </section>
