@@ -4,9 +4,37 @@
    ══════════════════════════════════════════════════════ */
 
 @font-face {
-  font-family: "IBrand";
-  src: url("../assets/ibrand.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Aloevera";
+  src: url("../assets/aloevera/Aloevera-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aloevera";
+  src: url("../assets/aloevera/Aloevera-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aloevera";
+  src: url("../assets/aloevera/Aloevera-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aloevera";
+  src: url("../assets/aloevera/Aloevera-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aloevera";
+  src: url("../assets/aloevera/Aloevera-Bold.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -76,7 +104,7 @@ svg {
   --rule: #e0e0e0;
 
   --display: "Cormorant Garamond", Georgia, serif;
-  --body: "IBrand", "Inter", -apple-system, sans-serif;
+  --body: "Aloevera", "Inter", -apple-system, sans-serif;
 
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
