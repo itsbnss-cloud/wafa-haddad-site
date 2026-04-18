@@ -218,6 +218,9 @@ h4 {
 .navbar:not(.scrolled) .brand-sub {
   color: var(--white);
 }
+.navbar:not(.scrolled) .nav-logo-icon {
+  filter: brightness(0) invert(1);
+}
 .navbar:not(.scrolled) .nav-links a::after {
   background: var(--white);
 }
