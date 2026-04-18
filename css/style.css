@@ -166,6 +166,15 @@ h4 {
   padding: 0 var(--px);
 }
 
+/* ── IMAGE PROTECTION ─────────────────────────────────── */
+img {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+a img, button img { pointer-events: auto; }
+
 /* ── 3. IMAGE BLUR REVEAL ─────────────────────────────── */
 .img-blur {
   filter: blur(14px);

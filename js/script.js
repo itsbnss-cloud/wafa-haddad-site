@@ -259,6 +259,17 @@ if (videoEl) {
     videoObserver.observe(videoEl);
 }
 
+/* ── 11. IMAGE PROTECTION ────────────────────────────────── */
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', e => e.preventDefault());
+    img.addEventListener('dragstart',   e => e.preventDefault());
+});
+// Block keyboard shortcut Save (Ctrl/Cmd+S) — mild deterrent
+document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') e.preventDefault();
+});
+
+
 /* ── 10. MARQUEE: pause on reduced-motion preference ──────── */
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const track = document.querySelector('.marquee-track');
