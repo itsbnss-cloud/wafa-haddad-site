@@ -1375,7 +1375,7 @@ a.footer-contact-row:hover { color: rgba(255,255,255,.65); }
         order: 1;
         min-height: 46svh;
     }
-    .hero-overline { margin-bottom: 16px; }
+    .hero-overline { display: none; }
     .hero-title {
         font-size: clamp(40px, 9.5vw, 64px);
         letter-spacing: -1px;
