@@ -1750,6 +1750,25 @@ a.footer-contact-row:hover {
    RESPONSIVE — MOBILE (≤ 900px)
 ══════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
+  :root {
+    --tr: 0.5s ease;
+    --tr-md: 0.7s var(--ease-out);
+    --tr-slow: 1s var(--ease-out);
+  }
+  .reveal {
+    transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out);
+  }
+  .img-blur {
+    transition: filter 1.4s var(--ease-out), transform 1.4s var(--ease-out);
+  }
+  .svc-flip-inner {
+    transition: transform 0.9s var(--ease-out);
+  }
+  @keyframes floatTag {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+  }
+
   /* ── Navbar ── */
   .nav-links,
   .nav-cta {
