@@ -93,7 +93,28 @@ const revealObserver = new IntersectionObserver(entries => {
 revealEls.forEach(el => revealObserver.observe(el));
 
 
-/* ── 3. HERO PARALLAX ──────────────────────────────────── */
+/* ── 3. IMAGE BLUR REVEAL ──────────────────────────────── */
+const imgEls = document.querySelectorAll('img:not(.nav-logo-icon)');
+const imgObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('img-sharp');
+            imgObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+
+imgEls.forEach(img => {
+    img.classList.add('img-blur');
+    if (img.complete) {
+        img.classList.add('img-sharp');
+    } else {
+        imgObserver.observe(img);
+    }
+});
+
+
+/* ── 4. HERO PARALLAX ──────────────────────────────────── */
 const heroVisual = document.getElementById('heroVisual');
 
 if (heroVisual && window.matchMedia('(min-width: 900px)').matches) {
