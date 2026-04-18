@@ -214,7 +214,23 @@ document.querySelectorAll('.svc-item').forEach(item => {
 });
 
 
-/* ── 9. MARQUEE: pause on reduced-motion preference ──────── */
+/* ── 9. VIDEO: autoplay on scroll into view ──────────────── */
+const videoEl = document.querySelector('.video-wrapper video');
+if (videoEl) {
+    videoEl.muted = true;
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                videoEl.play();
+            } else {
+                videoEl.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+    videoObserver.observe(videoEl);
+}
+
+/* ── 10. MARQUEE: pause on reduced-motion preference ──────── */
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const track = document.querySelector('.marquee-track');
     if (track) track.style.animationPlayState = 'paused';
