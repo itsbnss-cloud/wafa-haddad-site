@@ -359,14 +359,26 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 420px;
   min-height: 100svh;
-  background: var(--ivory);
+  background: var(--sage);
   position: relative;
   overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--ink);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  z-index: 3;
+  pointer-events: none;
 }
 
 /* Text column — content anchors to bottom */
 .hero-text {
-  padding: 160px var(--px) 80px;
+  padding: 160px var(--px) 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -383,27 +395,27 @@ h4 {
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: rgba(255,255,255,0.65);
   margin-bottom: 28px;
 }
 .ol-line {
   display: inline-block;
   width: 28px;
   height: 1px;
-  background: var(--sage);
+  background: rgba(255,255,255,0.5);
 }
 
 .hero-title {
   font-size: clamp(52px, 7vw, 104px);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.02;
   letter-spacing: -2px;
-  color: var(--ink);
+  color: var(--white);
   margin-bottom: 60px;
 }
 .hero-title em {
   font-style: italic;
-  color: var(--sage);
+  color: rgba(255,255,255,0.85);
   font-weight: 300;
 }
 
@@ -413,7 +425,7 @@ h4 {
 
 .hero-sub {
   font-size: clamp(16px, 1.8vw, 18px);
-  color: var(--ink-mid);
+  color: rgba(255,255,255,0.8);
   font-weight: 300;
   line-height: 1.8;
   max-width: 440px;
@@ -427,7 +439,7 @@ h4 {
   gap: 14px;
   font-size: 15px;
   font-weight: 500;
-  color: var(--ink);
+  color: var(--white);
   position: relative;
   width: fit-content;
 }
@@ -438,7 +450,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 1px;
-  background: var(--ink);
+  background: rgba(255,255,255,0.5);
   transform-origin: right;
   transition: transform 0.4s var(--ease-out);
 }
@@ -453,17 +465,17 @@ h4 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid var(--rule);
+  border: 1px solid rgba(255,255,255,0.4);
   transition: background var(--tr), border-color var(--tr), transform var(--tr);
 }
 .hero-cta:hover .hero-cta-arrow {
-  background: var(--sage);
-  border-color: var(--sage);
-  color: white;
+  background: white;
+  border-color: white;
+  color: var(--sage);
   transform: rotate(45deg);
 }
 .hero-cta:hover .hero-cta-arrow svg {
-  stroke: white;
+  stroke: var(--sage);
 }
 
 /* Stats */
@@ -472,7 +484,7 @@ h4 {
   align-items: center;
   gap: 32px;
   padding-top: 36px;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid rgba(255,255,255,0.25);
 }
 .stat-item {
   display: flex;
@@ -483,14 +495,14 @@ h4 {
   font-family: var(--display);
   font-size: clamp(30px, 3vw, 44px);
   font-weight: 400;
-  color: var(--ink);
+  color: var(--white);
   line-height: 1;
   display: inline;
 }
 .stat-item span {
   font-family: var(--display);
   font-size: clamp(22px, 2.2vw, 34px);
-  color: var(--sage);
+  color: rgba(255,255,255,0.7);
   font-weight: 300;
 }
 .stat-item small {
@@ -680,6 +692,7 @@ h4 {
   display: grid;
   grid-template-columns: 44vw 1fr;
   min-height: 80vh;
+  position: relative;
   align-items: center;
   overflow: hidden;
 }
@@ -757,9 +770,9 @@ h4 {
 
 .about-heading {
   font-size: clamp(36px, 4vw, 58px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.1;
-  color: var(--ink);
+  color: var(--sage-deep);
   margin-bottom: 28px;
 }
 .about-heading em {
@@ -810,8 +823,21 @@ h4 {
 
 /* ── 9. SERVICES — Cards marketing ────────────────────── */
 .services {
-  background: var(--ink);
+  background: var(--stone);
   padding: clamp(80px, 10vw, 140px) 0;
+  position: relative;
+}
+.services::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--ivory);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .services-header {
@@ -825,13 +851,13 @@ h4 {
 }
 .services-heading {
   font-size: clamp(36px, 5vw, 60px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.1;
-  color: var(--white);
+  color: var(--sage-deep);
 }
 .services-intro {
   font-size: 15px;
-  color: rgba(255,255,255,0.5);
+  color: var(--ink-soft);
   font-weight: 300;
   line-height: 1.8;
   max-width: 380px;
@@ -847,8 +873,8 @@ h4 {
 
 .svc-card {
   position: relative;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.09);
+  background: var(--white);
+  border: 1px solid var(--rule);
   border-radius: 20px;
   padding: 40px 36px;
   display: flex;
@@ -861,15 +887,15 @@ h4 {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at top left, rgba(7,168,141,0.08) 0%, transparent 65%);
+  background: radial-gradient(ellipse at top left, rgba(7,168,141,0.06) 0%, transparent 65%);
   opacity: 0;
   transition: opacity 0.6s var(--ease-out);
   pointer-events: none;
 }
 .svc-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
-  border-color: rgba(7,168,141,0.3);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.1);
+  border-color: var(--sage);
 }
 .svc-card:hover::before {
   opacity: 1;
@@ -886,7 +912,7 @@ h4 {
   font-family: var(--display);
   font-size: 11px;
   font-weight: 400;
-  color: rgba(255,255,255,0.2);
+  color: var(--ink-soft);
   letter-spacing: 2px;
 }
 .svc-card-badge {
@@ -903,14 +929,14 @@ h4 {
 }
 .svc-card-title {
   font-size: clamp(20px, 2.2vw, 26px);
-  font-weight: 400;
-  color: var(--white);
+  font-weight: 500;
+  color: var(--ink);
   line-height: 1.25;
   font-family: var(--display);
 }
 .svc-card-desc {
   font-size: 14px;
-  color: rgba(255,255,255,0.55);
+  color: var(--ink-mid);
   font-weight: 300;
   line-height: 1.8;
   flex: 1;
@@ -923,9 +949,9 @@ h4 {
 .svc-card-tags span {
   font-size: 11px;
   font-weight: 400;
-  color: rgba(255,255,255,0.4);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--sage-deep);
+  background: var(--sage-faint);
+  border: 1px solid var(--sage-mist);
   padding: 4px 12px;
   border-radius: 100px;
 }
@@ -935,7 +961,7 @@ h4 {
   gap: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: var(--sage);
+  color: var(--sage-deep);
   margin-top: 4px;
   transition: gap var(--tr);
 }
@@ -951,15 +977,31 @@ h4 {
 
 /* Featured card */
 .svc-card--featured {
-  background: rgba(7,168,141,0.08);
-  border-color: rgba(7,168,141,0.25);
+  background: var(--sage);
+  border-color: var(--sage);
 }
 .svc-card--featured .svc-card-title {
-  color: #fff;
+  color: var(--white);
+}
+.svc-card--featured .svc-card-desc {
+  color: rgba(255,255,255,0.8);
+}
+.svc-card--featured .svc-card-num {
+  color: rgba(255,255,255,0.5);
+}
+.svc-card--featured .svc-card-tags span {
+  color: var(--white);
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.2);
+}
+.svc-card--featured .svc-card-cta {
+  color: var(--white);
+}
+.svc-card--featured .svc-flip-hint {
+  color: rgba(255,255,255,0.5);
 }
 .svc-card--featured::before {
-  background: radial-gradient(ellipse at top left, rgba(7,168,141,0.18) 0%, transparent 65%);
-  opacity: 1;
+  display: none;
 }
 
 /* Flip card wrapper */
@@ -1020,7 +1062,7 @@ h4 {
 .svc-flip-hint {
   display: block;
   font-size: 11px;
-  color: rgba(255,255,255,0.3);
+  color: var(--ink-soft);
   margin-top: auto;
   padding-top: 16px;
 }
@@ -1037,9 +1079,9 @@ h4 {
 }
 .results-heading {
   font-size: clamp(40px, 6vw, 80px);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.05;
-  color: var(--ink);
+  color: var(--sage-deep);
   max-width: 500px;
 }
 .results-heading em {
