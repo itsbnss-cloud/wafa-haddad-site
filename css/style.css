@@ -212,6 +212,19 @@ h4 {
     padding 0.35s ease, box-shadow 0.35s ease;
   padding: 22px 0;
 }
+.navbar:not(.scrolled) .nav-links a,
+.navbar:not(.scrolled) .nav-cta,
+.navbar:not(.scrolled) .brand-name,
+.navbar:not(.scrolled) .brand-sub {
+  color: var(--white);
+}
+.navbar:not(.scrolled) .nav-links a::after {
+  background: var(--white);
+}
+.navbar:not(.scrolled) .nav-cta {
+  border-bottom-color: rgba(255,255,255,0.5);
+}
+
 .navbar.scrolled {
   background: rgba(248, 247, 244, 0.94);
   backdrop-filter: blur(16px);
