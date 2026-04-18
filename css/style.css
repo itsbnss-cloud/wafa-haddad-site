@@ -1884,7 +1884,7 @@ a.footer-contact-row:hover {
     min-height: 100svh;
   }
   .hero-text {
-    padding: 36px var(--px) 52px;
+    padding: 56px var(--px) 52px;
     order: 2;
     justify-content: flex-start;
   }
@@ -2059,7 +2059,7 @@ a.footer-contact-row:hover {
     grid-template-rows: 42svh auto;
   }
   .hero-text {
-    padding: 44px var(--px) 44px;
+    padding: 56px var(--px) 44px;
   }
   .hero-title {
     font-size: 36px;
